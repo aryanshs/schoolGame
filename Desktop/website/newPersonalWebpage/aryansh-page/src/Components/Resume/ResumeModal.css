@@ -1,0 +1,60 @@
+.resumeModalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Ensure it's above other content */
+  }
+  
+  .resumeModalContent {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    height: 90%;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .resumeModalIframe {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .resumeModalClose {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: #f00;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  
+  
+  @media (max-width: 1000px) {
+    .resumeModalContent {
+      width: 95%; /* Slightly increase the width on smaller screens */
+      /* Make the height automatic */
+      max-height: 90%; /* But don't let it get taller than 90% of the viewport height */
+      overflow: auto; /* Add scroll if content is larger than the modal */
+    }
+  
+    .resumeModalIframe {
+      height: auto; /* Adjust height to be auto so it scales with width */
+      max-height: 75vh; /* Set a max-height to maintain aspect ratio and usability */
+    }
+  
+    .resumeModalClose {
+      /* Adjust close button size if necessary */
+      padding: 3px 6px;
+    }
+  }

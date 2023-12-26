@@ -1,0 +1,109 @@
+.projects{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* align-items: center;
+    justify-content: center; */
+    background: linear-gradient(-45deg, #fdfbfb, #ebedee, #f4dfc8, #e8e8e8);
+    background-size: 400% 400%;
+    animation: gradientBg 15s ease infinite;
+    
+}
+
+@keyframes float {
+    0%, 100% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-10px);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+  
+
+.projectsContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 4% 10% 4% 10%;
+}
+
+.projectsHeading{
+    display: flex;
+    align-items: center;
+    gap: 2%;
+}
+
+.backButton{
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s; 
+}
+
+.backButton:hover{
+    cursor: pointer;
+    transform: scale(1.12);
+}
+
+.projectsList{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+}
+
+.project{
+    min-width: 200px;
+    max-width: 300px;
+    text-align: left;
+    border: 2px solid #000; 
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 2%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+    background-color: #FAF6F0;
+    animation: fadeInUp 0.5s ease-out forwards;
+    animation: fadeInUp 0.5s ease-out forwards;
+    animation-delay: calc(var(--animation-order) * 0.1s);
+}
+
+.project h3{
+    color: #E3651D;
+}
+
+.projectUsed{
+    font-weight: 600;
+}
+
+.project a {
+    display: inline-block; /* Makes the link block-level for padding */
+    padding: 8px 16px; /* Adds space around the text */
+    margin-top: 8px; /* Adds space above the link */
+    background-color: #007BFF; /* Example background color */
+    color: #ffffff; /* Text color */
+    text-decoration: none; /* Removes underline from links */
+    border-radius: 4px; /* Rounded corners for the link */
+    font-weight: bold; /* Makes the font bold */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  .project a:hover, .project a:focus {
+    background-color: #0056b3; /* Darkens background on hover/focus */
+    color: #ffffff; /* Keeps text color white on hover/focus */
+    text-decoration: none; /* Ensures no underline on hover/focus */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Enhances shadow on hover/focus */
+    transform: translateY(-2px); /* Makes the link rise a bit on hover/focus */
+  }
+  
+  .privateRepo{
+    text-decoration: underline;
+  }

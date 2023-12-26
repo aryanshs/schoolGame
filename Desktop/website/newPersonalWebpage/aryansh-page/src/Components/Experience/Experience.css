@@ -1,0 +1,68 @@
+.experience{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #fdfbfb, #ebedee, #f4dfc8, #e8e8e8);
+    background-size: 400% 400%;
+    animation: gradientBg 15s ease infinite;
+}
+@keyframes float {
+    0%, 100% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-10px);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+.exprienceHeading{
+    display: flex;
+    align-items: center;
+    gap: 2%;
+}
+
+.experienceContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 4% 10% 4% 10%;
+}
+
+.experienceList{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+}
+
+.experienceCard{
+    min-width: 200px;
+    max-width: 300px;
+    text-align: left;
+    border: 2px solid #000; 
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 2%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+    background-color: #FAF6F0;
+    animation: fadeInUp 0.5s ease-out forwards;
+    animation: fadeInUp 0.5s ease-out forwards;
+    animation-delay: calc(var(--animation-order) * 0.1s);
+}
+
+.experienceCard h3{
+    color: #E3651D;
+}
+
+.highlight-tech {
+    font-weight: 600;
+  }
+  
